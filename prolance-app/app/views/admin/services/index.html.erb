@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service code</th>
+      <th>Service name</th>
+      <th>Service category code</th>
+      <th>Service desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_services.each do |admin_service| %>
+      <tr>
+        <td><%= admin_service.service_code %></td>
+        <td><%= admin_service.service_name %></td>
+        <td><%= admin_service.service_category_code %></td>
+        <td><%= admin_service.service_desc %></td>
+        <td><%= link_to 'Show', admin_service %></td>
+        <td><%= link_to 'Edit', edit_admin_service_path(admin_service) %></td>
+        <td><%= link_to 'Destroy', admin_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service', new_admin_service_path %>

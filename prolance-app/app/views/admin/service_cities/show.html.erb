@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City airport code:</strong>
+  <%= @admin_service_city.city_airport_code %>
+</p>
+
+<p>
+  <strong>City name:</strong>
+  <%= @admin_service_city.city_name %>
+</p>
+
+<p>
+  <strong>State code:</strong>
+  <%= @admin_service_city.state_code %>
+</p>
+
+<p>
+  <strong>State name:</strong>
+  <%= @admin_service_city.state_name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @admin_service_city.country %>
+</p>
+
+<p>
+  <strong>Start pin code:</strong>
+  <%= @admin_service_city.start_pin_code %>
+</p>
+
+<p>
+  <strong>End pin code:</strong>
+  <%= @admin_service_city.end_pin_code %>
+</p>
+
+<%= link_to 'Edit', edit_admin_service_city_path(@admin_service_city) %> |
+<%= link_to 'Back', admin_service_cities_path %>

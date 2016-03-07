@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Service Cities</h1>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>City airport code</th>
+      <th>City name</th>
+      <th>State code</th>
+      <th>State name</th>
+      <th>Country</th>
+      <th>Start pin code</th>
+      <th>End pin code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_service_cities.each do |admin_service_city| %>
+      <tr>
+        <td><%= admin_service_city.city_airport_code %></td>
+        <td><%= admin_service_city.city_name %></td>
+        <td><%= admin_service_city.state_code %></td>
+        <td><%= admin_service_city.state_name %></td>
+        <td><%= admin_service_city.country %></td>
+        <td><%= admin_service_city.start_pin_code %></td>
+        <td><%= admin_service_city.end_pin_code %></td>
+        <td class="action"><%= link_to 'Show', admin_service_city %></td>
+        <td><%= link_to 'Edit', edit_admin_service_city_path(admin_service_city) %></td>
+        <td><%= link_to 'Destroy', admin_service_city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service city', new_admin_service_city_path %>
