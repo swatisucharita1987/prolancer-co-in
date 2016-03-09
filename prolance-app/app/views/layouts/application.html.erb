@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title><%= content_for?(:title) ? yield(:title) : "ProlanceApp" %></title>
       <%= csrf_meta_tags %>
-      <%= stylesheet_link_tag "application", :media => "all" %> 
+      <%= stylesheet_link_tag "application", :media => "all" %>
       <%= stylesheet_link_tag "bootstrap", "font-awesome.min", "flexslider", "style" %>
       <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" %>
       <!-- Google Fonts -->
@@ -56,16 +56,13 @@
             </div>
          </div>
       </div>
-      <div class="container" id=>
-      <div class="row">
-         <div class="col-lg-9">
+         <div class="row">
             <%= bootstrap_flash %>
             <%= yield %>
          </div>
          <div id="footer">
             &copy 2016 prolancer.co.in | All Rights Reserved |  <a href="http://prolancer.co.in" style="color: #fff" target="_blank">Designed by : prolancer.co.in</a>
          </div>
-      </div>
       <!-- /container -->
       <!--  Jquery Core Script -->
       <%= javascript_include_tag "jquery-1.10.2", "bootstrap", "jquery.flexslider", "jquery.flexslider", "scrollReveal", "jquery.easing.min", "custom"  %>
