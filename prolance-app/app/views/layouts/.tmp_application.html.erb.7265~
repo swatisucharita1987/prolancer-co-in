@@ -9,6 +9,8 @@
       <%= stylesheet_link_tag "application", :media => "all" %>
       <%= stylesheet_link_tag "bootstrap", "font-awesome.min", "flexslider", "style" %>
       <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" %>
+      <!-- Google Fonts -->
+      <![endif]-->
    </head>
    <body>
       <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
@@ -33,13 +35,13 @@
                <div class="row text-center " >
                   <div class="flexslider set-flexi" id="main-section">
                      <ul class="slides move-me">
-                        <!-- Slider 01 -->
+                        <!-- Slider 02 -->
                         <li>
                            <h3>Welcome to</h3>
                            <h1>ProLancer</h1>
                         </li>
-                        <!-- End Slider 01 -->
-                        <!-- Slider 02 -->
+                        <!-- End Slider 02 -->
+                        <!-- Slider 03 -->
                         <li>
                            <h3>India's most reliable marketplace for all services</h3>
                            <h1>ProLancer</h1>

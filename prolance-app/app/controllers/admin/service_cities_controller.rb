@@ -1,4 +1,6 @@
 class Admin::ServiceCitiesController < ApplicationController
+  
+  
   before_action :set_admin_service_city, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/service_cities

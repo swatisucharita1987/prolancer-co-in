@@ -1,3 +1,3 @@
 class Admin::ServiceCity < ActiveRecord::Base
-  attribute_accessible :city_name
+  has_many :service_requests
 end

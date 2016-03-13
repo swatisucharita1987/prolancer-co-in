@@ -1,4 +1,6 @@
 class Admin::ServicesController < ApplicationController
+  
+  
   before_action :set_admin_service, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/services

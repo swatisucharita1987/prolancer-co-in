@@ -1,5 +1,24 @@
 Rails.application.routes.draw do
+  
   root 'welcome#index'
+  
+  get 'admin' => 'admin#index'
+  
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  
+  get "sessions/create"
+  get "sessions/destroy"
+
+  resources :users
+  get 'service_request/new'
+
+  get 'service_requests/new' => 'service_requests#new'
+  
 
   namespace :admin do
     resources :services
@@ -10,7 +29,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :service_categories
-    resources :services 
+    resources :services
     resources :service_cities
   end
   # The priority is based upon order of creation: first created -> highest priority.
