@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :service_requests
   root 'welcome#index'
   
   get 'admin' => 'admin#index'

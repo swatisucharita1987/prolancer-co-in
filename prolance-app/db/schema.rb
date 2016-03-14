@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312183837) do
+ActiveRecord::Schema.define(version: 20160313171133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,15 +38,16 @@ ActiveRecord::Schema.define(version: 20160312183837) do
   end
 
   create_table "service_requests", force: :cascade do |t|
-    t.integer  "service_city_id"
-    t.integer  "service_id"
-    t.string   "service_detail"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.integer  "admin_service_city_id"
+    t.integer  "admin_service_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
-  add_index "service_requests", ["service_city_id"], name: "index_request_city", using: :btree
-  add_index "service_requests", ["service_id"], name: "index_request_service", using: :btree
+  add_index "service_requests", ["admin_service_city_id"], name: "index_service_requests_on_admin_service_city_id", using: :btree
+  add_index "service_requests", ["admin_service_id"], name: "index_service_requests_on_admin_service_id", using: :btree
+  add_index "service_requests", ["user_id"], name: "index_service_requests_on_user_id", using: :btree
 
   create_table "services", force: :cascade do |t|
     t.string   "service_name"
@@ -64,4 +65,7 @@ ActiveRecord::Schema.define(version: 20160312183837) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "service_requests", "admin_service_cities"
+  add_foreign_key "service_requests", "admin_services"
+  add_foreign_key "service_requests", "users"
 end

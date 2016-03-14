@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service_request.user %>
+</p>
+
+<p>
+  <strong>Admin service city:</strong>
+  <%= @service_request.admin_service_city %>
+</p>
+
+<p>
+  <strong>Admin service:</strong>
+  <%= @service_request.admin_service %>
+</p>
+
+<%= link_to 'Edit', edit_service_request_path(@service_request) %> |
+<%= link_to 'Back', service_requests_path %>
