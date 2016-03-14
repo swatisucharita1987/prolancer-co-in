@@ -1,21 +1,18 @@
-<div class="depot_form">
-	<% if flash[:alert] %>
-	  <p id="notice"><%= flash[:alert] %></p>
-	<% end %>
-    <%= bootstrap_form_tag do %>
-	<fieldset>
-		<legend>Please log in</legend>
-		<div class="form-group">
-			<%= label_tag :name, 'Name:' %>
-			<%= text_field_tag :user_name, params[:name]%>
-		</div>
-		<div class="form-group">
-			<%= label_tag :password, 'Password:' %>
-			<%= password_field_tag :password, params[:password]%>
-		</div>
-		<div class="form-group">
-			<%= submit_tag 'Login' %>
-		</div>
-	</fieldset>
-   <% end%>
-</div>
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<%= bootstrap_form_tag do %>
+    <h1>Sign In</h1>
+    <div class="form-group">
+      <%= text_field_tag :user_name, params[:name], :placeholder => "Username" %>
+    </div>
+    <div class="form-group">
+      <%= password_field_tag :password, params[:password], :placeholder => "Password" %>
+    </div>
+    <div class="form-group">
+      <%= submit_tag 'Sign In', :class => "btn btn-success" %>
+    </div>
+    <div class="form-group">
+      <%= link_to 'New user? Sign up here', new_user_url %>
+    </div>
+<% end %>

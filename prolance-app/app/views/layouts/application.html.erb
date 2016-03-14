@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title><%= content_for?(:title) ? yield(:title) : "ProlanceApp" %></title>
-      <%= csrf_meta_tags %>
-      <%= stylesheet_link_tag "application", :media => "all" %>
-      <%= stylesheet_link_tag "bootstrap", "font-awesome.min", "flexslider", "style" %>
-      <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" %>
-   </head>
-   <body>
-      <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
-         <div class="container">
-            <div>
-               <a class="navbar-brand" >ProLancer</a>
-            </div>
-            <div class="navbar-collapse collapse move-me">
-               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#home">HOME</a></li>
-                  <li><a href="#how-it-works-sec">HOW IT WORKS</a></li>
-                  <li><a href="#services-sec">OUR SERVICES</a></li>
-                  <li><a href="user_registration.html">SIGNUP</a></li>
-                  <li><a href="page_under_construction.html">CONTACT US</a></li>
-               </ul>
-            </div>
-         </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "ProlanceApp" %></title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap", "font-awesome.min", "flexslider", "style" %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" %>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+  <div class="container">
+    <div>
+      <a class="navbar-brand">ProLancer</a>
+    </div>
+    <div class="navbar-collapse collapse move-me">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "HOME", root_path %></li>
+        <li><%= link_to "HOW IT WORKS", welcome_how_it_works_path %></li>
+        <li><%= link_to "OUR SERVICES", welcome_services_path %></li>
+        <li><%= link_to "SIGNIN", login_path %></li>
+        <li><%= link_to "REGISTER", new_user_path %></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="home-sec">
+  <div class="overlay">
+    <div class="container">
+      <div class="row text-center ">
+        <div class="flexslider set-flexi" id="main-section">
+          <ul class="slides move-me">
+            <!-- Slider 01 -->
+            <li>
+              <h3>Welcome to</h3>
+              <h1>ProLancer</h1>
+            </li>
+            <!-- End Slider 01 -->
+            <!-- Slider 02 -->
+            <li>
+              <h3>India's most reliable marketplace for all services</h3>
+              <h1>ProLancer</h1>
+            </li>
+            <!-- End Slider 03 -->
+          </ul>
+        </div>
       </div>
-      <div class="home-sec"  >
-         <div class="overlay">
-            <div class="container">
-               <div class="row text-center " >
-                  <div class="flexslider set-flexi" id="main-section">
-                     <ul class="slides move-me">
-                        <!-- Slider 01 -->
-                        <li>
-                           <h3>Welcome to</h3>
-                           <h1>ProLancer</h1>
-                        </li>
-                        <!-- End Slider 01 -->
-                        <!-- Slider 02 -->
-                        <li>
-                           <h3>India's most reliable marketplace for all services</h3>
-                           <h1>ProLancer</h1>
-                        </li>
-                        <!-- End Slider 03 -->
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-            <%= bootstrap_flash %>
-            <%= yield %>
-         </div>
-         <div id="footer">
-            &copy 2016 prolancer.co.in | All Rights Reserved |  <a href="http://prolancer.co.in" style="color: #fff" target="_blank">Designed by : prolancer.co.in</a>
-         </div>
-      <!-- /container -->
-      <!--  Jquery Core Script -->
-      <%= javascript_include_tag "jquery-1.10.2", "bootstrap", "jquery.flexslider", "jquery.flexslider", "scrollReveal", "jquery.easing.min", "custom"  %>
-   </body>
+    </div>
+  </div>
+</div>
+<div>
+  <%= bootstrap_flash %>
+  <%= yield %>
+</div>
+<div id="footer">
+  &copy 2016 prolancer.co.in | All Rights Reserved |
+  <a href="http://prolancer.co.in" style="color: #fff" target="_blank">Designed by : prolancer.co.in</a>
+</div>
+<!-- /container -->
+<!--  Jquery Core Script -->
+<%= javascript_include_tag "jquery-1.10.2", "bootstrap", "jquery.flexslider", "jquery.flexslider", "scrollReveal", "jquery.easing.min", "custom" %>
+</body>
 </html>

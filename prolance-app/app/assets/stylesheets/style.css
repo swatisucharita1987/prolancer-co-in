@@ -208,9 +208,20 @@ h1::after {
   FACULTY STYLES 
   ===================================*/
 #services-sec {
-    background-color: #000;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    background: url(/assets/header.jpg) no-repeat center center;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+#services-sec .overlay {
+    background: rgba(0, 0, 0, 0.95);
     color: #fff;
 }
+.h4{text-align: center;}
 
 .header-line {
         color: #fff;
@@ -224,6 +235,7 @@ h1::after {
 .faculty-div h4 {
     line-height:30px;
     font-weight:700;
+    text-align: center;
 }
 .faculty-div {
     padding: 30px;
@@ -240,8 +252,9 @@ h1::after {
     }
 
     .faculty-div p {
-        padding-top: 10px;
-        padding-bottom: 15px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        text-align: center;
     }
 
     .faculty-div img {

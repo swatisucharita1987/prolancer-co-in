@@ -6,4 +6,8 @@ class WelcomeController < ApplicationController
   end
   def get_started
   end
+  def how_it_works
+  end
+  def services
+  end
 end

@@ -18,7 +18,64 @@
  *= require rails_bootstrap_forms
  */
 
-  table.center {
-    margin-left:auto; 
-    margin-right:auto;
-  }
+
+form {
+  text-align: center;
+}
+
+select {
+  width: 30%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #2f9484;
+}
+
+input[type=text], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  color: #2f9484;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+input[type=password] {
+  width: 30%;
+  background-color: whitesmoke;
+  display: inline-block;
+  color: #2f9484;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit] {
+  width: 30%;
+  background-color: #2f9484;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+btn-success{
+  background-color: #2f9484;
+}
+
+table.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#how-it-works-sec {
+  background-color: white;
+}

@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@service_request) do |f| %>
+<%= form_for(@service_request) do |f| %>
     <% if @service_request.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@service_request.errors.count, "error") %> prohibited this service_request from being
@@ -16,16 +16,10 @@
       <%= f.hidden_field :user_id, :value => session[:user_id] %>
     </div>
     <div class="form-group">
-      <%= f.label :admin_service_city_id, "City Name" %><br>
-      <div class="form-control">
-      <%= collection_select(:service_request, :admin_service_city_id, Admin::ServiceCity.all, :id, :city_name, {}, {:multiple => false}) %>
-        </div>
+      <%= collection_select(:service_request, :admin_service_city_id, Admin::ServiceCity.all, :id, :city_name, {:prompt => "Please select city of service"}) %>
     </div>
-    <div>
-      <%= f.label :admin_service_id, "Service Type" %>
-      <div class="form-control">
-        <%= collection_select(:service_request, :admin_service_id, Admin::Service.all, :id, :service_name, {}, {:multiple => false}) %>
-      </div>
+    <div class="form-group">
+        <%= collection_select(:service_request, :admin_service_id, Admin::Service.all, :id, :service_name, {:prompt => "Please select type of  service"}) %>
     </div>
     <div class="actions"><br><br>
       <%= f.submit :class => "btn btn-success" %>
