@@ -68,7 +68,7 @@ body {
 }
 
     .home-sec .overlay {
-        background: rgba(38, 57, 88, 0.89);
+        background: rgba(0, 0, 0, 0.90);
         min-height: 500px;
     }
 
@@ -219,7 +219,7 @@ h1::after {
     background-attachment: fixed;
 }
 #services-sec .overlay {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.90);
     color: #fff;
 }
 .h4{text-align: center;}
@@ -269,22 +269,28 @@ h1::after {
     padding-top: 10px;
     padding-bottom: 60px;
     bottom:70px;
-    background: url(../img/contact.jpg) no-repeat center center;
+    background: white;
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
+    min-height: 200px;
 }
 
 #contact-sec .overlay {
         background: rgba(0, 0, 0, 0.76);
         min-height: 600px;
     }
+#contact-sec h1 {
+    color:#1A94C4;
+}
 
-    #contact-sec h1 {
-        color:#fff;
-    }
+#contact-sec p {
+    color:#000;
+    text-align: center;
+    te;
+}
 #contact-sec .form-control{
     background-color:rgba(255, 255, 255, 0);
     color:#fff;
@@ -299,7 +305,7 @@ h1::after {
     height:40px;
     width:100%;
     padding:5px 20px;
-    background-color:#2d3d5a;
+    background-color: #1A94C4;
     text-align:right;
     color:#fff;
     font-size:15px;

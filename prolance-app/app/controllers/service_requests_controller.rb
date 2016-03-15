@@ -26,7 +26,6 @@ class ServiceRequestsController < ApplicationController
   # POST /service_requests.json
   def create
     @service_request = ServiceRequest.new(service_request_params)
-
     respond_to do |format|
       if @service_request.save
         format.html { redirect_to @service_request, notice: 'Service request was successfully created.' }
@@ -70,6 +69,6 @@ class ServiceRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_request_params
-      params.require(:service_request).permit(:user_id, :admin_service_city_id, :admin_service_id)
+      params.require(:service_request).permit(:user_id, :admin_service_city_id, :admin_service_id, :service_desc, :need_by_date)
     end
 end

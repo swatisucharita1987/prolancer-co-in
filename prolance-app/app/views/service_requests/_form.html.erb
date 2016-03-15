@@ -21,6 +21,12 @@
     <div class="form-group">
         <%= collection_select(:service_request, :admin_service_id, Admin::Service.all, :id, :service_name, {:prompt => "Please select type of  service"}) %>
     </div>
+    <div class="form-group">
+      <%= f.text_area :service_desc, placeholder: true %>
+    </div>
+    <div class="form-group">
+      <%= f.date_field :need_by_date,:start_year => 2016 %>
+    </div>
     <div class="actions"><br><br>
       <%= f.submit :class => "btn btn-success" %>
     </div>
