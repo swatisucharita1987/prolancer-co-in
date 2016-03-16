@@ -34,8 +34,8 @@ body {
 }
 
 #menu {
-    background-color: rgba(28, 43, 75, 1);
-    color: #fff;
+    background-color: #2d3d5a;
+    color: white;
     font-size: 12px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -48,7 +48,7 @@ body {
 }
 
     .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:hover {
-        color: #FFF;
+        color: white;
         padding: 22px 10px;
     }
 
@@ -58,7 +58,7 @@ body {
     ===================================*/
 .home-sec {
     padding-top: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     background: url(/assets/header.jpg) no-repeat center center;
     padding: 0;
     -webkit-background-size: cover;
@@ -69,14 +69,14 @@ body {
 
     .home-sec .overlay {
         background: rgba(0, 0, 0, 0.90);
-        min-height: 500px;
+        min-height: 40px;
     }
 
     .home-sec h1 {
         color: #2f9484;
         font-weight: 900;
         font-size: 50px;
-        padding-bottom: 35px;
+        padding-bottom: 5px;
     }
 
     .home-sec h3 {
@@ -305,7 +305,7 @@ h1::after {
     height:40px;
     width:100%;
     padding:5px 20px;
-    background-color: #1A94C4;
+    background-color: #2d3d5a;
     text-align:right;
     color:#fff;
     font-size:15px;

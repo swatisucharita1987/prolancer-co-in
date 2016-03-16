@@ -8,6 +8,4 @@ class WelcomeController < ApplicationController
   end
   def how_it_works
   end
-  def services
-  end
 end

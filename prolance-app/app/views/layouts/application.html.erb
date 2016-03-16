@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= content_for?(:title) ? yield(:title) : "ProlanceApp" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Prolancer" %></title>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "bootstrap", "font-awesome.min", "flexslider", "style" %>
@@ -14,16 +14,14 @@
 <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
   <div class="container">
     <div>
-      <a class="navbar-brand">ProLancer</a>
+      <a class="navbar-brand">ProLancer</a class="navbar-brand">
     </div>
     <div class="navbar-collapse collapse move-me">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "HOME", root_path %></li>
         <li><%= link_to "HOW IT WORKS", welcome_how_it_works_path %></li>
-        <li><%= link_to "OUR SERVICES", welcome_services_path %></li>
-        <li><%= link_to "SIGNIN", login_path %></li>
-        <li><%= link_to "REGISTER", new_user_path %></li>
-        </li>
+        <li><%= if session[:user_id].nil? then link_to "REGISTER", new_user_path  end%></li>
+        <li><%= if not session[:user_id].nil? then link_to "LOGOUT", sessions_destroy_path else link_to "SIGNIN", login_path end%></li>
       </ul>
     </div>
   </div>
@@ -34,16 +32,17 @@
       <div class="row text-center ">
         <div class="flexslider set-flexi" id="main-section">
           <ul class="slides move-me">
+            <h2><%= if current_page?(:controller => 'welcome', :action => 'index') then 'Welcome to' end %></h2>
             <!-- Slider 01 -->
             <li>
-              <h3>Welcome to</h3>
               <h1>ProLancer</h1>
+              <h2>We bring professionals to your finger tip.</h2>
             </li>
             <!-- End Slider 01 -->
             <!-- Slider 02 -->
             <li>
-              <h3>India's most reliable marketplace for all services</h3>
               <h1>ProLancer</h1>
+              <h2>India's most reliable marketplace for all services.</h2>
             </li>
             <!-- End Slider 03 -->
           </ul>

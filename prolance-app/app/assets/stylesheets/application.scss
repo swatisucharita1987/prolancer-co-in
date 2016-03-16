@@ -33,7 +33,7 @@ select {
 }
 
 input[type=text], select {
-  width: 30%;
+  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -45,7 +45,7 @@ input[type=text], select {
 }
 
 input[type=password] {
-  width: 30%;
+  width: 20%;
   background-color: whitesmoke;
   display: inline-block;
   color: #2f9484;
@@ -57,7 +57,7 @@ input[type=password] {
 }
 
 input[type=date] {
-  width: 30%;
+  width: 20%;
   background-color: whitesmoke;
   display: inline-block;
   color: #2f9484;
@@ -70,10 +70,12 @@ input[type=date] {
   cursor: pointer;
 }
 
-
+h1 {
+  color: black;
+}
 
 input[type=submit] {
-  width: 30%;
+  width: 20%;
   background-color: #2f9484;
   color: white;
   padding: 14px 20px;
@@ -84,7 +86,7 @@ input[type=submit] {
 }
 
 textarea {
-  width: 30%;
+  width: 20%;
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
