@@ -20,7 +20,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "HOME", root_path %></li>
         <li><%= link_to "HOW IT WORKS", welcome_how_it_works_path %></li>
-        <li><%= if session[:user_id].nil? then link_to "SIGNUP", new_user_path  end%></li>
         <li><%= if not session[:user_id].nil? then link_to "SIGNOUT", sessions_destroy_path else link_to "SIGNIN", login_path end%></li>
       </ul>
     </div>
@@ -52,8 +51,10 @@
   </div>
 </div>
 <div>
+  <div class="website-body">
   <%= bootstrap_flash %>
   <%= yield %>
+    </div>
 </div>
 <div id="footer">
   &copy 2016 prolancer.co.in | All Rights Reserved |
