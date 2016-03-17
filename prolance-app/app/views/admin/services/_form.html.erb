@@ -11,23 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :service_code %><br>
-    <%= f.text_field :service_code %>
+  <div class="form-group">
+    <%= f.text_field :service_code, :placeholder => "2 Character long service code" %>
   </div>
-  <div class="field">
-    <%= f.label :service_name %><br>
-    <%= f.text_field :service_name %>
+  <div class="form-group">
+    <%= f.text_field :service_name, :placeholder => "Service full name" %>
   </div>
-  <div class="field">
-    <%= f.label :service_category_code %><br>
-    <%= f.text_field :service_category_code %>
+  <div class="form-group">
+    <%= f.text_field :service_category_code, :placeholder => "Service category code (Optional)" %>
   </div>
-  <div class="field">
-    <%= f.label :service_desc %><br>
-    <%= f.text_field :service_desc %>
+  <div class="form-group">
+    <%= f.text_field :service_desc, :placeholder => "Service description" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create", :class => "btn btn-success"%>
   </div>
 <% end %>
