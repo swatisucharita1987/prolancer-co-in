@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'welcome/how_it_works'
 
   get 'welcome/services'
+
+  get 'welcome/landing_page'
   
   get 'admin' => 'admin#index'
   
