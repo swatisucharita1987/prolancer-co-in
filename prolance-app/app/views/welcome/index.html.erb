@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="row text-center ">
-    <%= if session[:user_id].nil? then link_to "GET STARTED", login_path, :class => "btn btn-info btn-set" else link_to "ORDER HISTORY", service_requests_path, :class => "btn btn-info btn-set"  end%>
+    <%= if session[:user_id].nil? then link_to "GET STARTED", login_path, :class => "btn btn-info btn-set" else link_to "MY PROFILE", '/welcome/landing_page', :class => "btn btn-info btn-set"  end%>
   </div>
   <!--/.HEADER LINE END-->
   <div class="row">

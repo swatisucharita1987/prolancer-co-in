@@ -1,35 +1,37 @@
-<h1>I am at landing<h1>
-  <div class="row" align="center">
+<h1><%="Welcome #{session[:user_name]}"%></h1>
+<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 ">
 
-    <div class="col-sm-4">
-      <div class="w3-card-8 w3-dark-grey">
+  <div class="col-lg-6">
+    <div class="w3-card-4">
 
-        <div class="w3-container w3-center">
-          <h3>Friend request</h3>
-          <img src="img_avatar3.png" alt="Avatar" style="width:80%">
-          <h5>John Doe</h5>
+      <header class="w3-container w3-blue-grey">
+        <h2>CUSTOMER</h2>
+      </header>
 
-          <button class="w3-btn w3-green">Accept</button>
-          <button class="w3-btn w3-red">Decline</button>
-        </div>
-
+      <div class="w3-container">
+        <h2>I am a customer and looking for professional service:<br></h2> <p>Please tell us what you need. Our professionals will contact you shortly and get your work done. Once your order is complete, please
+          share a review. Your review and feedback will help us hire better professionals for customers like you.</p>
+        <%=link_to "CREATE A NEW ORDER", new_service_request_path, :class => "btn btn-info btn-set"%>
+        <%=link_to "VIEW ORDER HISTORY", service_requests_path, :class => "btn btn-info btn-set"%>
       </div>
-
+    </div>
   </div>
-    <div class="col-sm-4">
 
-      <div class="w3-card-8 w3-dark-grey">
+  <div class="col-lg-6 ">
+    <div class="w3-card-4">
 
-        <div class="w3-container w3-center">
-          <h3>Friend request</h3>
-          <img src="img_avatar3.png" alt="Avatar" style="width:80%">
-          <h5>John Doe</h5>
+      <header class="w3-container w3-teal">
+        <h2>PARTNER</h2>
+      </header>
 
-          <button class="w3-btn w3-green">Accept</button>
-          <button class="w3-btn w3-red">Decline</button>
-        </div>
-
+      <div class="w3-container">
+        <h2>I am a professional service provider:<br></h2> <p>Please complete your profile and tell us more about what kind of service you provide. Our operations team will reach out to you
+        within next 48 hours and help you get started. Please feel free to ask any questions you may have. You may be asked to provide additional documentation for the same.
+      </p>
+        <%=link_to "COMPLETE MY PROFILE", login_path, :class => "btn btn-info btn-set"%>
+        <%=link_to "GO TO DASHBOARD", login_path, :class => "btn btn-info btn-set"%>
       </div>
 
     </div>
-    </div>
+  </div>
+</div>
