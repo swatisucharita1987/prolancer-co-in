@@ -20,7 +20,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "HOME", root_path %></li>
         <li><%= link_to "HOW IT WORKS", welcome_how_it_works_path %></li>
-        <li><%= if not session[:user_id].nil? then link_to "SIGNOUT", sessions_destroy_path else link_to "SIGNIN", login_path end%></li>
+        <li><%= if not session[:user_id].nil? then
+                  link_to "SIGNOUT", sessions_destroy_path
+                else
+                  link_to "SIGNIN", login_path
+                end %></li>
       </ul>
     </div>
   </div>
@@ -31,7 +35,9 @@
       <div class="row text-center ">
         <div class="flexslider set-flexi" id="main-section">
           <ul class="slides move-me">
-            <h2><%= if current_page?(root_path) then 'Welcome to' end %></h2>
+            <h2><%= if current_page?(root_path) then
+                      'Welcome to'
+                    end %></h2>
             <!-- Slider 01 -->
             <li>
               <h1>ProLancer</h1>
@@ -52,9 +58,9 @@
 </div>
 <div>
   <div class="website-body">
-  <%= bootstrap_flash %>
-  <%= yield %>
-    </div>
+    <%= bootstrap_flash %>
+    <%= yield %>
+  </div>
 </div>
 <div id="footer">
   &copy 2016 prolancer.co.in | All Rights Reserved |

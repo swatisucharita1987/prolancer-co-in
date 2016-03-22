@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :partner_profiles
   resources :service_requests
 
   root 'welcome#index'

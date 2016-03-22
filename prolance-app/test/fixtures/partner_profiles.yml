@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  admin_service_city_id: 
+  driving_licence_number: MyString
+  driving_license_state: MyString
+  pan_number: MyString
+  adhaar_number: MyString
+  passport_number: MyString
+  passport_issue_city: MyString
+  admin_service_id: 
+  approval_code: MyString
+  approved_by: MyString
+  approved_timestamp: 2016-03-18 22:53:31
+  address_line1: MyString
+  address_line2: MyString
+  address_line3: MyString
+  city: MyString
+  state: MyString
+  pin_code: MyString
+
+two:
+  user_id: 
+  admin_service_city_id: 
+  driving_licence_number: MyString
+  driving_license_state: MyString
+  pan_number: MyString
+  adhaar_number: MyString
+  passport_number: MyString
+  passport_issue_city: MyString
+  admin_service_id: 
+  approval_code: MyString
+  approved_by: MyString
+  approved_timestamp: 2016-03-18 22:53:31
+  address_line1: MyString
+  address_line2: MyString
+  address_line3: MyString
+  city: MyString
+  state: MyString
+  pin_code: MyString

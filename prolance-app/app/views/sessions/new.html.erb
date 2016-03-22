@@ -1,7 +1,7 @@
 <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
 <% end %>
-<%= bootstrap_form_tag do %>
+<%= form_tag do %>
     <h1>Sign In</h1>
     <div class="form-group">
       <%= text_field_tag :user_name, params[:name], :placeholder => "Username" %>

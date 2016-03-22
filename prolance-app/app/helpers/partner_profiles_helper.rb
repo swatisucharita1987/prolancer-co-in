@@ -1,0 +1,2 @@
+module PartnerProfilesHelper
+end

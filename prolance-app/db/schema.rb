@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315051806) do
+ActiveRecord::Schema.define(version: 20160319055331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,33 @@ ActiveRecord::Schema.define(version: 20160315051806) do
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
+
+  create_table "partner_profiles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "admin_service_city_id"
+    t.string   "driving_licence_number"
+    t.string   "driving_license_state"
+    t.string   "pan_number"
+    t.string   "adhaar_number"
+    t.string   "passport_number"
+    t.string   "passport_issue_city"
+    t.integer  "admin_service_id"
+    t.string   "approval_code"
+    t.string   "approved_by"
+    t.datetime "approved_timestamp"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "address_line3"
+    t.string   "city"
+    t.string   "state"
+    t.string   "pin_code"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "partner_profiles", ["admin_service_city_id"], name: "index_partner_profiles_on_admin_service_city_id", using: :btree
+  add_index "partner_profiles", ["admin_service_id"], name: "index_partner_profiles_on_admin_service_id", using: :btree
+  add_index "partner_profiles", ["user_id"], name: "index_partner_profiles_on_user_id", using: :btree
 
   create_table "service_requests", force: :cascade do |t|
     t.integer  "user_id"
@@ -67,6 +94,9 @@ ActiveRecord::Schema.define(version: 20160315051806) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "partner_profiles", "admin_service_cities"
+  add_foreign_key "partner_profiles", "admin_services"
+  add_foreign_key "partner_profiles", "users"
   add_foreign_key "service_requests", "admin_service_cities"
   add_foreign_key "service_requests", "admin_services"
   add_foreign_key "service_requests", "users"
