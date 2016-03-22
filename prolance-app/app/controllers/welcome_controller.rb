@@ -14,6 +14,8 @@ class WelcomeController < ApplicationController
   def landing_page
     if session[:user_id].nil?
       redirect_to '/login'
+    else
+      @partner_profile = PartnerProfile.where(user_id: session[:user_id])
     end
   end
 
