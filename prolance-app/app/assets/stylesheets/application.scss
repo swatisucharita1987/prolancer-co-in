@@ -17,6 +17,7 @@
 /*
  *= require rails_bootstrap_forms
  */
+@import "bootstrap";
 
 form {
   text-align: center;
@@ -130,19 +131,40 @@ html {
   -webkit-text-size-adjust: 100%
 }
 
-#error_explanation {
-  color: #f00;
-  width: 100%;
-  background-color: #1c2b4b;
-  align-content: center ;
-  ul {
-    list-style: none;
-    background-color: teal;
-  }
+.info, .success, .warning, .error, .validation {
+  margin: 5px 0px;
+  padding:15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px ;
+  width: auto;
+}
+.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('Checked.png');
+}
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image:url('Checked.png');
+}
+.warning {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('Attention.png');
+}
+.error {
+  color: maroon;
+  background-color: #FFCCBA;
+  background-image: url('Cancel.png');
+}
+.validation {
+  color: #D63301;
+  background-color: #FFCCBA;
+  background-image: url('Attention.png');
 }
 
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block
 }
 

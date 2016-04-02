@@ -28,10 +28,10 @@
         <h2>I am a professional service provider:<br></h2> <p>Please complete your profile and tell us more about what kind of service you provide. Our operations team will reach out to you
         within next 48 hours and help you get started. Please feel free to ask any questions you may have.
       </p>
-        <% if @partner_profile.nil? %>
+        <% if @partner_profile_to_update.nil? %>
           <%=link_to "COMPLETE MY PROFILE", new_partner_profile_path, :class => "btn btn-info btn-set" %>
         <% else %>
-          <%=link_to "UPDATE MY PROFILE", edit_partner_profile_path(@partner_profile), :class => "btn btn-info btn-set" %>
+          <%=link_to "UPDATE MY PROFILE", edit_partner_profile_url(@partner_profile_to_update), :class => "btn btn-info btn-set" %>
         <% end %>
         <%=link_to "GO TO DASHBOARD", login_path, :class => "btn btn-info btn-set"%>
       </div>

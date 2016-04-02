@@ -15,7 +15,11 @@ class WelcomeController < ApplicationController
     if session[:user_id].nil?
       redirect_to '/login'
     else
-      @partner_profile = PartnerProfile.where(user_id: session[:user_id])
+      if !PartnerProfile.find_by(user_id: session[:user_id]).nil?
+        @partner_profile_to_update = PartnerProfile.find_by(user_id: session[:user_id])[:id]
+      else
+        nil
+      end
     end
   end
 

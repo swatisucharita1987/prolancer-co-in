@@ -5,9 +5,9 @@ class PartnerProfile < ActiveRecord::Base
   belongs_to :admin_service
 
   validates :user_id, presence: true, uniqueness: true
-  validates :admin_service_id, :presence => {:massage => "Please select a service from the list."}
-  validates :admin_service_city_id, :presence=>{:massage => "Oh..oh!Please select a city  from the list."}
-  validate :validate_driving_license_number?
+  validates :admin_service_id, :presence =>  {:message => "Please select a service from the list."}
+  validates :admin_service_city_id, :presence=>{:message => "Please select a city  from the list."}
+  validate  :validate_driving_license_number?
   validates :address_line1, presence: true
   validates :city, presence: true
   validates :state, presence: true

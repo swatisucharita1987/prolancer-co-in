@@ -1,71 +1,73 @@
-<%= form_for(@partner_profile) do |f| %>
-    <% if @partner_profile.errors.any? %>
-        <div id="error_explanation" >
-          <h2><%= pluralize(@partner_profile.errors.count, "error") %> prohibited this partner_profile from being
-            saved:</h2>
-
-            <% @partner_profile.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-        </div>
-    <% end %>
 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-    <div class="form-group">
-      <%= f.hidden_field :user_id, :value => session[:user_id] %>
-    </div>
-    <div class="form-group">
-      <%= collection_select(:partner_profile, :admin_service_city_id, Admin::ServiceCity.all, :id, :city_name, {:prompt => "Please service city:"}) %>
-    </div>
-    <div class="form-group">
-      <%= collection_select(:partner_profile, :admin_service_id, Admin::Service.all, :id, :service_name, {:prompt => "Please service type:"}) %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :driving_licence_number, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :driving_license_state, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :pan_number, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :adhaar_number, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :passport_number, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :passport_issue_city, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.hidden_field :approval_code, value: "None" %>
-    </div>
-    <div class="form-group">
-      <%= f.hidden_field :approved_by, value: "None" %>
-    </div>
-    <div class="form-element" hidden=true>
-      <%= f.date_select :approved_timestamp %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :address_line1, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :address_line2, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :address_line3, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :city, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :state, placeholder: true %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :pin_code, placeholder: true %>
-    </div>
-    <div class="actions">
-      <%= f.submit "SUBMIT PROFILE", :class => "btn btn-success" %>
-    </div>
-<% end %>
+  <%= form_for(@partner_profile) do |f| %>
+      <% if @partner_profile.errors.any? %>
+          <div id="error_explanation">
+            <h3><%= pluralize(@partner_profile.errors.count, "error") %> prohibited this partner_profile from being
+              saved.</h3>
+            <% @partner_profile.errors.full_messages.each do |message| %>
+                <div class="error">
+                <ul><%= message %></ul>
+                </div>
+            <% end %>
+          </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.hidden_field :user_id, :value => session[:user_id] %>
+      </div>
+      <div class="form-group">
+        <%= collection_select(:partner_profile, :admin_service_city_id, Admin::ServiceCity.all, :id, :city_name, {:prompt => "Please service city:"}) %>
+      </div>
+      <div class="form-group">
+        <%= collection_select(:partner_profile, :admin_service_id, Admin::Service.all, :id, :service_name, {:prompt => "Please service type:"}) %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :driving_licence_number, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :driving_license_state, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :pan_number, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :adhaar_number, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :passport_number, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :passport_issue_city, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.hidden_field :approval_code, value: "None" %>
+      </div>
+      <div class="form-group">
+        <%= f.hidden_field :approved_by, value: "None" %>
+      </div>
+      <div class="form-element" hidden=true>
+        <%= f.date_select :approved_timestamp %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :address_line1, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :address_line2, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :address_line3, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :city, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :state, placeholder: true %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :pin_code, placeholder: true %>
+      </div>
+      <div class="actions">
+        <%= f.submit "SUBMIT PROFILE", :class => "btn btn-success" %>
+      </div>
+  <% end %>
 </div>

@@ -1,5 +1,5 @@
 class PartnerProfilesController < ApplicationController
-  before_action :set_partner_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_partner_profile, only: [:show, :edit, :update]
 
   # GET /partner_profiles
   # GET /partner_profiles.json
